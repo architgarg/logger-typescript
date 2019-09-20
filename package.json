@@ -1,18 +1,33 @@
 {
-  "name": "logger",
-  "version": "1.0.0",
+  "name": "logger-typescript",
+  "version": "1.0.8",
   "description": "A logger for better logging in typescript configurable for dev and prod environments.",
-  "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "index.js",
   "keywords": [
+    "angular-logger",
+    "logger-typescript",
     "logger",
     "ts-logger",
+    "logger-ts",
     "typescript-logger",
     "logger-ts",
-    "archit-logger"
+    "global-logger",
+    "global-typescript-logger",
+    "global-ts-logger"
   ],
-  "author": "Archit Garg",
+  "scripts": {
+    "flush": "rm -rf ./dist/* && mkdir -p ./dist",
+    "build": "yarn run flush && webpack --config webpack.js",
+    "publish": "cd dist && npm publish && cd ../"
+  },
+  "types": "./@types/logger/index.d.ts",
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.3",
+    "ts-loader": "~5.4.3",
+    "typescript": "3.4.5",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  },
+  "author": "Archit garg <thearchitgargg@gmail.com> (https://github.com/thearchitgarg)",
   "license": "ISC"
 }
