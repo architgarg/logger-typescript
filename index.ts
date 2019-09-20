@@ -2,6 +2,7 @@ export class Logger {
 
   // Demo for the medium blog.
   // Demo for the medium blog.
+  // Demo for the medium blog.
 
   static configure(production) {
     (window as any).logger = {
