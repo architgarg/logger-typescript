@@ -1,5 +1,7 @@
 export class Logger {
 
+  // Demo for the medium blog.
+
   static configure(production) {
     (window as any).logger = {
       log: (log) => {
